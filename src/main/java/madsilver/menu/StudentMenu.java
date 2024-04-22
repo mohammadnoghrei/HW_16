@@ -87,7 +87,6 @@ public class StudentMenu {
 
         }else System.out.println("your lesson unit more than limit of units or your lesson not exist");
 
-
     }
 
     public boolean checkHaveLesson(Lesson lesson){
