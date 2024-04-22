@@ -1,0 +1,17 @@
+package madsilver.base.repository;
+
+import madsilver.base.entity.BaseEntity;
+
+import java.io.Serializable;
+import java.util.Optional;
+
+import jakarta.persistence.EntityTransaction;
+public interface BaseRepository<T extends BaseEntity<ID>, ID extends Serializable> {
+
+
+    T saveOrUpdate(T entity);
+
+    Optional<T> findById(ID id);
+
+    void delete(T entity);
+}
