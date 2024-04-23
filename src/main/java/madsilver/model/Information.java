@@ -17,8 +17,8 @@ import madsilver.base.entity.BaseEntity;
 @NoArgsConstructor
 public class Information extends BaseEntity<Long> {
 
-    @Min(1)
-    @Max(20)
+//    @Min(1)
+//    @Max(20)
     private double rate;
 
 
