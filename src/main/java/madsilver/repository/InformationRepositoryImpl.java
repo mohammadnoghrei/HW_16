@@ -45,7 +45,8 @@ public class InformationRepositoryImpl extends BaseRepositoryImpl<Information, L
         Information information = query.uniqueResult();
         if (information.getLesson().getProfessor().getId() == professor) {
             information.setRate(rate);
-            ApplicationContext.getInformationService().saveOrUpdate(information);
+            if (ApplicationContext.getInformationService().validate(information)){
+            ApplicationContext.getInformationService().saveOrUpdate(information);}
         }
         session.close();
     }
