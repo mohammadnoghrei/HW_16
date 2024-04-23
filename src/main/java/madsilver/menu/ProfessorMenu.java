@@ -99,7 +99,10 @@ public class ProfessorMenu {
         Long lesson =scanner.nextLong();
         System.out.println("please enter rate");
         double rate =scanner.nextInt();
-        informationService.rated(studentId,lesson,rate,SecurityContext.id);
+        if (1<=rate&&rate<=20) {
+            informationService.rated(studentId,lesson,rate,SecurityContext.id);
+            System.out.println("rate register");
+        }else System.out.println("please enter valid rate 1-20");
     }
 
 
